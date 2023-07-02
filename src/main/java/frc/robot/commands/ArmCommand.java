@@ -4,12 +4,16 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.motorcontrol.PWMTalonFX;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 public class ArmCommand extends CommandBase {
+  private final PWMTalonFX arm;
   /** Creates a new ArmCommand. */
   public ArmCommand() {
     // Use addRequirements() here to declare subsystem dependencies.
+    arm = new PWMTalonFX(0);
+    
   }
 
   // Called when the command is initially scheduled.
